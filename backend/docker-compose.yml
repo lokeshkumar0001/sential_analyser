@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      - YOUTUBE_API_KEY=AIzaSyAhxf8u0dCUS4qD0apWSz32jGDgJSy8ny4
+      - TWITTER_CONSUMER_KEY=your_consumer_key
+      - TWITTER_CONSUMER_SECRET=your_consumer_secret
+      - TWITTER_ACCESS_TOKEN=your_access_token
+      - TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret
+    volumes:
+      - .:/app
+    # network: host
