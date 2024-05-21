@@ -1,5 +1,7 @@
 "use client"
 import Form from "@/components/Form";
+import CommentsPanel from  "@/components/CommentsPanel";
+
 import { useState } from "react";
 
 export default function Home() {
@@ -20,7 +22,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="content bg-red-100 flex-1">No comments</div>
+      <div className="content bg-red-100 flex-1">
+        <CommentsPanel sentinalData={sentinalData}  />
+      </div>
     </main>
   );
 }
