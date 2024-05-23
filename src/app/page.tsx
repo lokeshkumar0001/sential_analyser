@@ -13,8 +13,8 @@ export default function Home() {
 
   return (
 
-    <div className="">
-      <nav className="bg-white text-gray-600 w-full  border-b-2 ">
+    <div className="h-screen">
+      {/* <nav className="bg-white text-gray-600 w-full  border-b-2 ">
                 <div className="flex justify-between items-center mx-auto">
                     <div className="flex items-center  w-full">
                         <Image
@@ -44,9 +44,9 @@ export default function Home() {
   
                 </div>
                
-            </nav>
+            </nav> */}
 
-    <main className="flex flex-col   lg:flex-row " style={{ backgroundImage: 'linear-gradient(to right , #8c52ff, #5ce1e6)' }}>
+    <main className="flex flex-col  h-full  lg:flex-row " style={{ backgroundImage: 'linear-gradient(to right , #8c52ff, #5ce1e6)' }}>
       <div className=" w-full lg:w-2/5  " >
         <h1 className="my-16 mx-auto text-3xl md:text-6xl  font-bold text-center w-96  h-auto "
          >Sentiment Analyser</h1>
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="content flex-1 lg:w-3/5">
+      <div className="content flex-1 flex items-center justify-center lg:w-3/5">
         <CommentsPanel sentinalData={sentinalData}  />
       </div>
     </main>

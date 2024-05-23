@@ -13,12 +13,7 @@ export default function Form({ isLoading,setIsLoading,setSentinalData }: FormPro
   const [error,setError] = useState(null);
   const [videoUrl, setVideoUrl] = useState('');
 
-  function extractVideoId(url: string): string | null {
-    const match = url.match(
-      /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/|user\/(?:[^\/\n\s]+\/)+)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
-    );
-    return match ? match[1] : null;
-  }
+  
   
   async function handleFormSubmit(event:any){
     event.preventDefault();
@@ -60,4 +55,11 @@ export default function Form({ isLoading,setIsLoading,setSentinalData }: FormPro
     </form>
    
   );
+}
+
+function extractVideoId(url: string): string | null {
+  const match = url.match(
+    /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/|user\/(?:[^\/\n\s]+\/)+)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
+  );
+  return match ? match[1] : null;
 }

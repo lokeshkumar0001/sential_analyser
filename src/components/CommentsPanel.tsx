@@ -5,7 +5,7 @@ interface CommentsPanelProps {
 }
 export default function CommentsPanel({sentinalData}:CommentsPanelProps) {
   return (
-    <div className='bg-slate-100 w-auto rounded-3xl mx-12 my-10 p-8  shadow-lg shadow-slate-500' >
+    <div className='bg-slate-100 w-full rounded-3xl mx-12  p-8  shadow-lg shadow-slate-500' >
       <div className='flex h-8  mb-6  gap-[10px]  ' > 
       <p className='w-4/5 text-center  rounded-md font-bold bg-[#d2e1fc]' >Comments</p>
       <p className='w-1/5 text-center font-bold rounded-md bg-[#d2e1fc]' >Sentiment</p>
