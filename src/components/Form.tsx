@@ -29,13 +29,15 @@ export default function Form({ isLoading,setIsLoading,setSentinalData }: FormPro
   }
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label htmlFor="video_url">Video Id</label>
-      <input type="text" required id="video_url" name="video_url" />
+    
+    <form  className=" flex flex-col h-60 md:h-full rounded-3xl mx-12 lg:mx-8 xl:mx-16 py-8 md:py-20 bg-slate-100 text-md md:text-xl font-normal shadow-slate-500 shadow-lg" onSubmit={handleFormSubmit} >
+      <label className="w-80 md:w-96 lg:w-80 xl:w-96 mx-auto text-start  " htmlFor="video_url">Video Id</label>
+      <input className=" w-80 md:w-96 lg:w-80 xl:w-96 h-12 mx-auto bg-zinc-400 rounded-xl" type="text" required id="video_url" name="video_url" />
       {error && (<p>{error}</p>)}
-      <button type="submit" disabled={isLoading}>
-        {isLoading ? "Loading..." : "Get Sentinel"}
+      <button className="w-64 h-16 mx-auto text-center my-8 rounded-xl bg-zinc-400  " type="submit" disabled={isLoading}>
+        {isLoading ? "Loading..." : "Get Sentiment"}
       </button>
     </form>
+   
   );
 }

@@ -9,11 +9,10 @@ export default function Home() {
   const [sentinalData, setSentinalData] = useState<string[]>([]);
 
   return (
-    <main className="flex min-h-screen bg-yellow-100">
-      <div className="bg-blue-100">
-        <h1>sentianl</h1>
+    <main className="flex flex-col min-h-screen  lg:flex-row">
+      <div className=" w-full lg:w-2/5  " >
+        <h1 className="my-16 mx-auto text-3xl md:text-5xl  font-semibold text-center w-96  h-auto ">Sentiment Analyser</h1>
         <div>
-
         <Form
           isLoading={isLoading}
           setIsLoading={setIsLoading}
@@ -22,7 +21,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="content bg-red-100 flex-1">
+      <div className="content flex-1 lg:w-3/5">
         <CommentsPanel sentinalData={sentinalData}  />
       </div>
     </main>
